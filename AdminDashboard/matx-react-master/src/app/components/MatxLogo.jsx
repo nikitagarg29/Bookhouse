@@ -5,55 +5,9 @@ const MatxLogo = ({ className }) => {
   const theme = settings.themes[settings.activeTheme];
 
   return (
-    <svg
-      width="24px"
-      height="24px"
-      className={className}
-      viewBox="0 0 240 239"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-    >
-      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g
-          id="logo"
-          transform="translate(120.500000, 98.000000) rotate(-270.000000) translate(-120.500000, -98.000000) translate(-21.000000, -35.000000)"
-        >
-          <g
-            id="Group"
-            transform="translate(141.500000, 133.000000) rotate(90.000000) translate(-141.500000, -133.000000) translate(9.000000, -8.000000)"
-          >
-            <g
-              id="Path-4-Copy"
-              transform="translate(132.242532, 149.243361) rotate(-135.000000) translate(-132.242532, -149.243361) translate(38.742532, 55.743361)"
-            >
-              <g id="path-1-link" fill="#000000">
-                <polygon
-                  id="path-1"
-                  points="136.269985 0.8695976 186.615824 50.367072 186.615824 186.98041 50.7100649 186.98041 0.4346189 136.704964"
-                ></polygon>
-              </g>
-              <g id="path-1-link" fill={theme.palette.primary.light}>
-                <polygon
-                  id="path-1"
-                  points="136.269985 0.8695976 186.615824 50.367072 186.615824 186.98041 50.7100649 186.98041 0.4346189 136.704964"
-                ></polygon>
-              </g>
-            </g>
-            <polygon
-              id="Path-3"
-              fill={theme.palette.primary.light}
-              points="13 238.415212 13 0 249.898437 238.415212"
-            ></polygon>
-            <polygon
-              id="Path-4"
-              fill={theme.palette.primary.main}
-              points="252.486992 0 252.486992 238.799226 13 238.799226"
-            ></polygon>
-          </g>
-        </g>
-      </g>
-    </svg>
+    <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="#fff" stroke-width="2" d="M10,1 L10,11 L13,9 L16,11 L16,1 M5.5,18 C4.11928813,18 3,19.1192881 3,20.5 C3,21.8807119 4.11928813,23 5.5,23 L22,23 M3,20.5 L3,3.5 C3,2.11928813 4.11928813,1 5.5,1 L21,1 L21,18.0073514 L5.49217286,18.0073514 M20.5,18 C19.1192881,18 18,19.1192881 18,20.5 C18,21.8807119 19.1192881,23 20.5,23 L20.5,23"/>
+</svg>
   );
 };
 

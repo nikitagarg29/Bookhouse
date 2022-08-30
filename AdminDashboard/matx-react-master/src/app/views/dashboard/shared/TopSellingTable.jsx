@@ -101,7 +101,7 @@ const TopSellingTable = () => {
                 </TableCell>
 
                 <TableCell align="left" colSpan={2} sx={{ px: 0, textTransform: 'capitalize' }}>
-                  ${product.price > 999 ? (product.price / 1000).toFixed(1) + 'k' : product.price}
+                  Rs{product.price > 999 ? (product.price / 1000).toFixed(1) + 'k' : product.price}
                 </TableCell>
 
                 <TableCell sx={{ px: 0 }} align="left" colSpan={2}>
@@ -132,32 +132,32 @@ const TopSellingTable = () => {
 
 const productList = [
   {
-    imgUrl: '/assets/images/products/headphone-2.jpg',
-    name: 'earphone',
+    //imgUrl: '/assets/images/products/headphone-2.jpg',
+    name: 'The Bell Jar',
     price: 100,
     available: 15,
   },
   {
-    imgUrl: '/assets/images/products/headphone-3.jpg',
-    name: 'earphone',
+    //imgUrl: '/assets/images/products/headphone-3.jpg',
+    name: 'Writing to Learn',
     price: 1500,
     available: 30,
   },
   {
-    imgUrl: '/assets/images/products/iphone-2.jpg',
-    name: 'iPhone x',
+    //imgUrl: '/assets/images/products/iphone-2.jpg',
+    name: 'Atomic Habits',
     price: 1900,
     available: 35,
   },
   {
-    imgUrl: '/assets/images/products/iphone-1.jpg',
-    name: 'iPhone x',
+    //imgUrl: '/assets/images/products/iphone-1.jpg',
+    name: 'Let Us C',
     price: 100,
     available: 0,
   },
   {
-    imgUrl: '/assets/images/products/headphone-3.jpg',
-    name: 'Head phone',
+    //imgUrl: '/assets/images/products/headphone-3.jpg',
+    name: 'Bogus to Bubbly',
     price: 1190,
     available: 5,
   },

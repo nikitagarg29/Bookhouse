@@ -1,14 +1,12 @@
 import { DatePicker } from "@mui/lab";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import Dropzone from "./DropZone";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import {
   Button,
   Checkbox,
   FormControlLabel,
   Grid,
-  Icon,
-  Radio,
-  RadioGroup,
   styled,
 } from "@mui/material";
 import { Span } from "app/components/Typography";
@@ -46,14 +44,9 @@ const SimpleForm = () => {
 
   const {
     productName,
-    firstName,
-    creditCard,
-    mobile,
-    password,
-    confirmPassword,
-    gender,
+    description,
     date,
-    email,
+    productId,
   } = state;
 
   return (
@@ -74,22 +67,22 @@ const SimpleForm = () => {
 
             <TextField
               type="text"
-              name="firstName"
-              label="First Name"
+              name="description"
+              label="Product Description"
               onChange={handleChange}
-              value={firstName || ""}
+              value={description || ""}
               validators={["required"]}
               errorMessages={["this field is required"]}
             />
 
             <TextField
-              type="email"
-              name="email"
-              label="Email"
-              value={email || ""}
+              type="number"
+              name="productId"
+              label="Product ID"
+              value={productId || ""}
               onChange={handleChange}
-              validators={["required", "isEmail"]}
-              errorMessages={["this field is required", "email is not valid"]}
+              validators={["required"]}
+              errorMessages={["this field is required"]}
             />
 
             <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -106,75 +99,11 @@ const SimpleForm = () => {
                 )}
               />
             </LocalizationProvider>
-
-            <TextField
-              sx={{ mb: 4 }}
-              type="number"
-              name="creditCard"
-              label="Credit Card"
-              onChange={handleChange}
-              value={creditCard || ""}
-              errorMessages={["this field is required"]}
-              validators={["required", "minStringLength:16", "maxStringLength: 16"]}
-            />
           </Grid>
 
           <Grid item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-            <TextField
-              type="text"
-              name="mobile"
-              value={mobile || ""}
-              label="Mobile Nubmer"
-              onChange={handleChange}
-              validators={["required"]}
-              errorMessages={["this field is required"]}
-            />
-            <TextField
-              name="password"
-              type="password"
-              label="Password"
-              value={password || ""}
-              onChange={handleChange}
-              validators={["required"]}
-              errorMessages={["this field is required"]}
-            />
-            <TextField
-              type="password"
-              name="confirmPassword"
-              onChange={handleChange}
-              label="Confirm Password"
-              value={confirmPassword || ""}
-              validators={["required", "isPasswordMatch"]}
-              errorMessages={["this field is required", "password didn't match"]}
-            />
-            <RadioGroup
-              row
-              name="gender"
-              sx={{ mb: 2 }}
-              value={gender || ""}
-              onChange={handleChange}
-            >
-              <FormControlLabel
-                value="Male"
-                label="Male"
-                labelPlacement="end"
-                control={<Radio color="secondary" />}
-              />
 
-              <FormControlLabel
-                value="Female"
-                label="Female"
-                labelPlacement="end"
-                control={<Radio color="secondary" />}
-              />
-
-              <FormControlLabel
-                value="Others"
-                label="Others"
-                labelPlacement="end"
-                control={<Radio color="secondary" />}
-              />
-            </RadioGroup>
+            <Dropzone/>
 
             <FormControlLabel
               control={<Checkbox />}
@@ -184,8 +113,7 @@ const SimpleForm = () => {
         </Grid>
 
         <Button color="primary" variant="contained" type="submit">
-          <Icon>send</Icon>
-          <Span sx={{ pl: 1, textTransform: "capitalize" }}>Submit</Span>
+          <Span sx={{ pl: 1, textTransform: "capitalize" }}>Add Product</Span>
         </Button>
       </ValidatorForm>
     </div>
