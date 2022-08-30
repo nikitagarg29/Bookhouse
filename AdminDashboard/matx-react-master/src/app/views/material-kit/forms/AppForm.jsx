@@ -21,13 +21,13 @@ const AppForm = () => {
       </Box>
 
       <Stack spacing={3}>
-        <SimpleCard title="Simple Form">
+        <SimpleCard title="Add Product">
           <SimpleForm />
         </SimpleCard>
 
-        <SimpleCard title="stepper form">
+        {/* <SimpleCard title="stepper form">
           <StepperForm />
-        </SimpleCard>
+        </SimpleCard> */}
       </Stack>
     </Container>
   );

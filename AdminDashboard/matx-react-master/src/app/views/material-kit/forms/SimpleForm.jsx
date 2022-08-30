@@ -45,7 +45,7 @@ const SimpleForm = () => {
   const handleDateChange = (date) => setState({ ...state, date });
 
   const {
-    username,
+    productName,
     firstName,
     creditCard,
     mobile,
@@ -63,12 +63,12 @@ const SimpleForm = () => {
           <Grid item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
             <TextField
               type="text"
-              name="username"
+              name="productName"
               id="standard-basic"
-              value={username || ""}
+              value={productName || ""}
               onChange={handleChange}
               errorMessages={["this field is required"]}
-              label="Username (Min length 4, Max length 9)"
+              label="Name of Product"
               validators={["required", "minStringLength: 4", "maxStringLength: 9"]}
             />
 
